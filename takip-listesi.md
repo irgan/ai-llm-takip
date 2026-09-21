@@ -12,260 +12,199 @@ Haftalık raporlar ayrı dosyalardır: `raporlar/YYYY-AA-GG.md`. Bu dosya rapor 
 - "Son güncelleme"si 21+ gün eskiyen konu "Arşivlenmiş Konular"a taşınır.
 - Arşivdeki konu yeniden gündeme gelirse Aktif'e döner.
 - Sayısal iddialar (yıldız, parametre, benchmark) yalnızca birincil kaynaktan/API'den alınır. GitHub yıldızları yalnızca `stargazers_count`'tan.
-- Sıkıştırma (log kısaltma) haftalık değil, 3 ayda bir yapılır — git geçmişi zaten koruduğu için acele gerekmez.
+- Sıkıştırma (log kısaltma) haftalık değil, dosya 25KB'ı aştığında ya da 3 ayda bir yapılır.
 
 ## Aktif Takip Listesi
 
 ### 2. Anthropic modelleri ve kurumsal/güvenlik gelişmeleri (Opus 5 / Fable 5 / Sonnet 5)
-- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük (07-27/08-07 özet: Fable 5 küresel erişim, Sonnet 5 tanıtım fiyatı $2/$10, Opus 5 yayınlandı; Cuéllar CGAO oldu, açık ağırlık pozisyon belgesi, Cognizant ortaklığı):
-  - 2026-08-10 (🟢): Cowork yayınlandı. Claude Code'da otomatik mod 14 Ağustos'tan itibaren Pro/Max/Team'de varsayılan — testte otomatik mod tehlikeli eylemlerin %89'unu, insan onayı %13.6'sını yakaladı; prompt injection taraması + deny kuralları eklendi.
-  - 2026-08-17: kontrol edildi, gelişme yok (yalnızca rutin bir kısa süreli servis kesintisi vardı, kayda değer değil).
-  - 2026-08-24 (🟡): Geriye dönük fark edilen gelişme — Anthropic 11 Ağustos'ta Claude'un tüm AI-üretimi çıktılarına (metin/ses/görsel/video) görünmez, makine-okunur watermark ekleyeceğini duyurdu. Gerekçe AB AI Act Madde 50(2) uyumu ama uygulama küresel; yeni ürünlerde 2 Ağustos'tan itibaren, eski modellerde 2 Aralık 2026'ya kadar tamamlanacak. Bu hafta (17-24 Ağustos) ayrıca yeni gelişme yok.
-  - 2026-08-31: kontrol edildi, gelişme yok (bu haftaki büyük Anthropic haberleri — Cowork hafıza birleşmesi ve Salesforce ortaklığı — ayrı konu başlıkları altında işlendi, bkz. #21 ve #23).
-  - 2026-09-07 (🟢): Anthropic, "Claude Commerce Agents" adında Apache-2.0 lisanslı bir referans blueprint'i açık kaynak yaptı (1-3 Eylül, resmi repo + PYMNTS/MarkTechPost haberleri). Perakende, seyahat, telekom ve eğlence dikeylerinde çalışan bir Alışveriş Ajanı (ürün arama/karşılaştırma/sepet) ve bir Satıcı Ajanı (envanter/fiyatlandırma/kampanya) içeriyor; Messages API, Agent SDK ve Managed Agents üzerinde çalışıyor. Güvenlik tasarımı fencing, provenance gate'leri, onay iş akışları ve hafıza doğrulamasını içeriyor. GitHub API ile doğrulandı: anthropics/commerce-agents — 1 haftadan kısa sürede 2.275 yıldız, 392 fork. Visa/Mastercard ile bağlantılı olduğu bildiriliyor (PYMNTS), fiyatlandırma açıklanmadı.
-  - 2026-09-14 (🟡): Üç ayrı gelişme: (1) "Smart Reports" (beta) yayınlandı — Enterprise kullanıcılar için ekip kullanım deseni, maliyet, sürtünme noktaları ve tekrar kullanılabilir skill fırsatlarını analiz eden bir araç (10 Eylül; resmi Claude Yardım Merkezi release notes ile doğrulandı). (2) Anthropic Tehdit İstihbaratı ekibi "Detecting and countering misuse of AI: September 2026" raporunu yayınladı (10 Eylül, resmi anthropic.com/news) — 8 aylık dönemde tespit edilip durdurulan kötüye kullanım operasyonlarını detaylandırıyor. (3) Claude Code 2.1.270 (12 Eylül) uzun oturumlarda salt-okunur git komutlarının gereksiz yere izin istemesine yol açan bash regresyonunu düzeltti. GitHub API ile doğrulandı: anthropics/commerce-agents — 2.821 yıldız, 533 fork (2.275'ten, %24,0 haftalık artış).
+- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (07-27/08-17 özet: Fable 5 küresel erişim, Sonnet 5 tanıtım fiyatı $2/$10, Opus 5 yayınlandı; Cuéllar CGAO oldu, açık ağırlık pozisyon belgesi, Cognizant ortaklığı; Cowork yayınlandı, Claude Code'da otomatik mod varsayılan oldu — tehlikeli eylemlerin %89'unu yakaladı; 17 Ağustos'ta gelişme yok):
+  - 2026-08-24 (🟡): Anthropic 11 Ağustos'ta tüm AI-üretimi çıktılara görünmez watermark ekleyeceğini duyurdu (AB AI Act Madde 50(2) uyumu, uygulama küresel).
+  - 2026-08-31: kontrol edildi, gelişme yok (büyük haberler #21/#23 altında işlendi).
+  - 2026-09-07 (🟢): "Claude Commerce Agents" (Apache-2.0) açık kaynak blueprint'i yayınlandı — Alışveriş + Satıcı ajanları. GitHub API: anthropics/commerce-agents 2.275 yıldız, 392 fork.
+  - 2026-09-14 (🟡): Üç gelişme — "Smart Reports" (beta, 10 Eylül), Tehdit İstihbaratı raporu (10 Eylül), Claude Code 2.1.270 bash regresyon düzeltmesi (12 Eylül). commerce-agents 2.821 yıldız, 533 fork (%24,0 haftalık artış).
+  - 2026-09-21 (🟢): Anthropic, Claude'un kendi bir sonraki modelinin AR-GE'sinde artık işin %26'sını "yönettiğini" duyurdu — Şubat'ta %0'dan Ağustos'ta %26'ya; R&D'nin %90'ında bir şekilde katkısı var; Ağustos itibarıyla ~30.000 ajan araştırma/mühendislik işi yapıyor (18 Eylül; resmi Anthropic duyurusu + spectrumlocalnews haberi ile doğrulandı). Duyuru, Dario Amodei'nin "yavaşlama" çağrılarıyla aynı haftaya denk geldi; Anthropic şeffaflık için diğer laboratuvarları da benzer metrikleri paylaşmaya çağırdı. GitHub API ile doğrulandı: anthropics/commerce-agents — 3.002 yıldız, 579 fork (2.821'den, %6,4 haftalık artış).
 
 ### 3. Gemini 3.5/3.6/3.7/3.8 Flash ailesi (Google DeepMind)
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-07 | Durum: Aktif
-- Günlük (07-27 özet: 3.5 Flash Cyber/Lite, 3.6 Flash ilk takip, amiral gemisi çıktı maliyeti $9.00→$7.50):
-  - 2026-08-10 (🟡): 3.6 Flash için yönetilen ajanlar platformu genişledi — hook/trigger, uzaktan MCP, arka plan görevleri.
-  - 2026-08-17 (🟢): Google, 3.6 Flash'tan yalnızca 3 hafta sonra Gemini 3.7 Flash'ı duyurdu (13 Ağustos, Google resmi blog). FrontierCode %34,4→%43,6, DeepSWE %49,0→%65,3, WebDev Arena 1538→1588 Elo, AutomationBench %17,0→%30,4. Giriş fiyatı (31 Aralık 2026'ya kadar) $0,75/$3,75 per MTok — 3.6 Flash'ın yarısı; normal fiyat 1 Ocak 2027'den itibaren $1,50/$7,50.
-  - 2026-08-24: kontrol edildi, gelişme yok (Gemini API resmi changelog'da 13 Ağustos'tan bu yana yeni girdi yok).
-  - 2026-08-31: kontrol edildi, gelişme yok (Gemini API changelog'da hâlâ yeni girdi yok).
-  - 2026-09-07 (🟢): Google, 3.7 Flash'tan yalnızca 3 hafta sonra Gemini 3.8 Flash'ı duyurdu (2 Eylül, 9to5Google haberi). Hız/verimlilik yerine "daha derin analiz" odaklı — karmaşık görevlerde ek akıl yürütme adımları ve yinelemeli araç çağrıları yapıyor. HLE-Verified (çok adımlı STEM/profesyonel akıl yürütme): %54,9. DeepSWE v1.1'de daha büyük amiral gemisi modelleri daha düşük maliyetle geçiyor (spesifik puan verilmedi). NOT: Kaynakta belirtilen giriş fiyatı ($0,75/$3,75 per MTok, 31 Aralık'a kadar) 3.7 Flash'la birebir aynı — WebFetch özetleyicisinin eski rakamı tekrarlamış olma ihtimali var (K1), bu yüzden fiyat bilgisi doğrulanamadı olarak işaretleniyor.
-  - 2026-09-14: kontrol edildi, gelişme yok (Gemini API resmi changelog'da 2-3 Eylül'den (3.8 Flash GA, Lyria 3.5 önizleme) bu yana yeni girdi yok).
+- Günlük (07-27/08-17 özet: 3.5 Flash Cyber/Lite, 3.6 Flash ilk takip, amiral gemisi çıktı maliyeti $9.00→$7.50; yönetilen ajanlar platformu genişledi; Gemini 3.7 Flash duyuruldu — FrontierCode %34,4→%43,6, WebDev Arena 1538→1588 Elo):
+  - 2026-08-24: kontrol edildi, gelişme yok.
+  - 2026-08-31: kontrol edildi, gelişme yok.
+  - 2026-09-07 (🟢): Gemini 3.8 Flash duyuruldu (2 Eylül) — "daha derin analiz" odaklı, HLE-Verified %54,9. NOT (K1): Giriş fiyatı kaynakta 3.7 Flash ile birebir aynıydı, doğrulanamadı olarak işaretlendi.
+  - 2026-09-14: kontrol edildi, gelişme yok (Gemini API changelog'da 2-3 Eylül'den bu yana yeni girdi yok).
+  - 2026-09-21: kontrol edildi, gelişme yok (Gemini API changelog'da yeni girdi yok; Gemini 4 hakkında yalnızca doğrulanmamış "release date" tahmin makaleleri bulundu, rapora alınmadı — K1).
 
-### 6. Qwen serisi (Alibaba: 3.8-Max, 3.8-27B, 3.8-Flash-Next, QwenWork, Audio-3.0-TTS, Image-3.0)
-- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük (07-27/08-08 özet: 3.8-Max-Preview, Audio-3.0-TTS #1, Image-3.0 ilk takip; 3.8-Max resmen duyuruldu 2.4T, Unsloth day-zero destek):
-  - 2026-08-10 (🟢): 3.8-Max genel kullanıma açıldı ($2/$6 per MTok); 27B açık ağırlıklı varyant yayınlandı.
-  - 2026-08-17 (🟡): Alibaba, bir sonraki Qwen modeli için gelir paylaşımlı lisans modeline geçeceğini duyurdu (7 Ağustos) — büyük ticari kullanıcılar Alibaba ile anlaşma yapacak. Kesin oran henüz belirlenmedi.
+### 6. Qwen serisi (Alibaba: 3.8-Max, 3.8-27B, 3.8-Flash-Next, QwenWork, Image-2.1)
+- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (07-27/08-17 özet: 3.8-Max-Preview, Audio-3.0-TTS #1, Image-3.0 ilk takip; 3.8-Max resmen duyuruldu 2.4T; 3.8-Max GA oldu + 27B açık ağırlıklı varyant yayınlandı; gelir paylaşımlı lisans modeli duyurusu):
   - 2026-08-24: kontrol edildi, doğrudan AI/ürün gelişmesi yok.
-  - 2026-08-31 (🟢): Qwen3.8-27B (16 Ağustos, Apache 2.0) geniş basın ilgisi gördü — Artificial Analysis Intelligence Index'te 52 puan, GPT-5.6 Luna ile eşit; SWE-bench Pro %61,7, LiveCodeBench %90,3. 4-bit sıkıştırılmış versiyonu ~17GB VRAM ile çalışıyor.
-  - 2026-09-07 (🟡): Geriye dönük fark edilen gelişme — Alibaba, Qwen4 mimarisinin önizlemesi olarak sunulan Qwen3.8-Flash-Next'i yayınladı (~26 Ağustos, TechNode/Decrypt/The Decoder haberleri; önceki haftanın taramasında atlanmış). 6B aktif parametreli MoE, "ultimate cost efficiency" hedefli, açık ağırlıklı. Qwen4'ün mimari yönelimine dair ilk somut işaret olarak sunuluyor. Spesifik benchmark rakamları kaynaklar arası tutarsız olduğu için rapora alınmadı.
-  - 2026-09-14 (🟡): Geriye dönük fark edilen gelişme — Alibaba, üç mevcut ajan servisini (QoderWork, MuleRun, Wukong) birleştiren "QwenWork" adlı ajan platformunun küresel beta sürümünü duyurdu (1 Eylül; newsbytes.ph haberi). Standart katman Qwen3.8 Flash modelini kullanıyor; web/bilgisayar otomasyonu, doküman/görsel/video/ses üretimi, dosya analizi ve oturumlar arası tercih hafızası ("awareness") içeriyor. Önce Çin'de ağustos başında tanıtılmış, bu hafta Asya/Orta Doğu/Latin Amerika'da küresel beta olarak genişledi.
+  - 2026-08-31 (🟢): Qwen3.8-27B (Apache 2.0) geniş basın ilgisi gördü — Artificial Analysis Intelligence Index 52 puan, SWE-bench Pro %61,7.
+  - 2026-09-07 (🟡): Geriye dönük fark edilen gelişme — Qwen3.8-Flash-Next yayınlandı (~26 Ağustos), Qwen4 mimarisinin önizlemesi olarak sunuluyor.
+  - 2026-09-14 (🟡): Geriye dönük fark edilen gelişme — "QwenWork" ajan platformu küresel beta olarak genişledi (1 Eylül duyurusu).
+  - 2026-09-21 (🟡): Alibaba, açık ağırlıklı Qwen-Image-2.1'i yayınladı (20 Eylül; CellCog/ExplainX/RuntimeWire/36Kr haberleri + resmi GitHub reposu ile doğrulandı). 7B parametreli görsel üretici, metinden-görsele üretim ve görsel düzenlemeyi tek sistemde birleştiriyor, native RGBA şeffaflık destekliyor, tek kompozisyonda 10 referans görsele kadar destekliyor (32 katmanlı diffusion transformer + Qwen3-VL 8B metin kodlayıcı). Hugging Face/ModelScope/GitHub'da eşzamanlı yayınlandı, ComfyUI/Diffusers entegrasyonu hazır. NOT: Hiçbir kaynak rakip modellere karşı sayısal bir benchmark tablosu yayınlamadı (K1) — bu yüzden karşılaştırmalı puan rapora alınmadı. Lisans: ticari kullanım için "Qwen Research License" ile ayrı izin gerekiyor.
 
 ### 12. AI ajan güvenlik açıkları (sandbox kaçışları, framework RCE)
-- İlk görülme: 2026-08-07 | Son güncelleme: 2026-09-07 | Durum: Aktif
-- Günlük (08-07/08-08 özet: Ajanlar izole ortamlardan kaçtı, CISA 12 framework'te kritik RCE tespit etti; IBM Langflow CVE-2026-9198 KEV kataloğuna eklendi):
-  - 2026-08-10 (🟡): Cursor IDE sandbox atlatma açıkları (CVE-2026-50548/50549). AI tarayıcılarını hedefleyen "PleaseFix" sıfır-tıklama saldırıları duyuruldu.
-  - 2026-08-17 (🟡): Black Hat 2026'da Anthropic/Google/OpenAI kodlama ajanlarında RCE, kimlik bilgisi hırsızlığı, prompt injection ve tedarik zinciri riskleri bulundu. "RovoBlast" tekniği Atlassian Rovo oturumlarını istismar ediyor. Veracode: AI üretimi kodun güvenlik geçme oranı %56.
+- İlk görülme: 2026-08-07 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-07/08-17 özet: Ajanlar izole ortamlardan kaçtı, CISA 12 framework'te kritik RCE tespit etti, IBM Langflow CVE-2026-9198 KEV'e eklendi; Cursor sandbox atlatma CVE-2026-50548/50549; Black Hat 2026'da kodlama ajanlarında RCE/kimlik hırsızlığı/prompt injection bulguları, Veracode: AI kodunun güvenlik geçme oranı %56):
   - 2026-08-24: kontrol edildi, yeni gelişme yok.
   - 2026-08-31 (⚪): DavidCarliez/trustmebro (304 yıldız) — sahte tool-output ile guardrail atlatma aracı gündeme geldi.
-  - 2026-09-07 (🟢): Manifold Security'nin "GitSpawn" araştırması (2 Eylül, The Hacker News haberi) Git'in `core.fsmonitor` ayarını istismar eden bir RCE zinciri buldu — kötü niyetli bir `.git/config` (arşiv/USB/paylaşılan sürücü ile taşınan repolarda) agent'ın sandbox/onay adımları dışında, kullanıcı yetkisiyle komut çalıştırmasına yol açıyor. 1 Eylül itibarıyla 7 ajan etkilendi: goose (1.44.0'da düzeltildi), Claude Code (2.1.196'da kısmen düzeltildi, "ultrareview" yolunda ek açık sürüyor), Cursor ve Codex CLI/Desktop düzeltildi; Hermes Agent, Qwen Code ve Grok Build HÂLÂ YAMANMAMIŞ. Aynı gün OpenAI ayrıca Codex için 3 ayrı CVE yayınladı.
-  - 2026-09-14: kontrol edildi, bu hafta (8-14 Eylül) için doğrulanmış yeni bir ajan güvenlik açığı/yama duyurusu bulunamadı — GitSpawn açığının bu haftaki güncel yama durumunu doğrulayan bir kaynağa erişilemedi (WebFetch hedef sayfası 404 döndü), bu yüzden rapora alınmadı (K2/K1). Son güncelleme değişmedi.
+  - 2026-09-07 (🟢): "GitSpawn" araştırması (Manifold Security, 2 Eylül) Git'in `core.fsmonitor` ayarını istismar eden RCE zinciri buldu. 7 ajan etkilendi: goose ve Claude Code (kısmen, "ultrareview" yolunda ek açık) düzeltildi, Cursor/Codex düzeltildi; Hermes Agent, Qwen Code, Grok Build YAMANMAMIŞ.
+  - 2026-09-14: kontrol edildi, doğrulanmış yeni gelişme bulunamadı (hedef sayfa 404 döndü — K2).
+  - 2026-09-21 (🟡): Karışık/çelişkili sinyal. Hermes Agent'ın resmi GitHub deposunda GitSpawn açığını kapatan bir PR (#101483, GHSA-7x36-8jrh-v4pw / CVE-2026-71963) 2 Eylül tarihinde birleştirilmiş görünüyor — `noninteractive_git_env()` ile `core.fsmonitor`/`core.hooksPath` sinklerini etkisizleştiriyor. Ancak 16 Eylül tarihli ikincil bir kaynak (shattered.io) o tarihte hâlâ Hermes Agent'ı "yamasız, düzeltme bekliyor" olarak listeliyor — iki kaynak çelişiyor, kesin güncel durum doğrulanamadı (K1), izlenmeye devam edilecek. Aynı kaynağa göre 16 Eylül itibarıyla Qwen Code ve Grok Build hâlâ yamasız; Claude Code, Cursor, Codex, goose patched.
 
 ### 13. DeepSeek V4-Flash/V4.1-Flash/V4-Pro + DeepSeek Harness (dsh)
-- İlk görülme: 2026-08-07 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük:
-  - 2026-08-07: V4-Flash-0731 MIT lisansıyla açık kaynak; 284B MoE, Terminal-Bench ~82.7.
-  - 2026-08-17 (🟢): V4 Pro GA oldu (12 Ağustos). SWE-bench Verified %80,6; 1,6T toplam/49B aktif parametre. DeepSeek Harness (dsh) v0.1 yayınlandı (13 Ağustos).
-  - 2026-08-24 (🟢): dsh resmi reposu 11 günde 189.256 yıldıza ulaştı (GitHub API doğrulu).
-  - 2026-08-31 (🟡): dsh 205.243 yıldız, 23.773 fork (%8,4 haftalık artış) — büyüme sürüyor ama hız kesiyor.
-  - 2026-09-07 (⚪): deepseek-ai/deepseek-harness GitHub API ile doğrulandı — 214.358 yıldız, 25.247 fork (205.243'ten, %4,4 haftalık artış). Büyüme yavaşlamaya devam ediyor.
-  - 2026-09-14 (🟢): DeepSeek, V4.1-Flash modelini yayınladı (10 Eylül; resmi DeepSeek API değişiklik günlüğü ile doğrulandı) — yerel çok-modlu (multimodal) yetenekler ekliyor, model adı `deepseek-flash` olarak güncellendi. Aynı duyuruda DeepSeek, V4 Pro API hizmetini 14 Eylül sonrasında da aynı ücretlendirmeyle sürdüreceğini bildirdi. GitHub API ile doğrulandı: deepseek-ai/deepseek-harness — 222.968 yıldız, 26.482 fork (214.358'den, %4,0 haftalık artış — büyüme yavaş da olsa sürüyor).
-
-### 15. AB Yapay Zeka Yasası (AI Act) uygulama takvimi
-- İlk görülme: 2026-08-07 | Son güncelleme: 2026-08-31 | Durum: Aktif
-- Günlük:
-  - 2026-08-07: Madde 50 şeffaflık kuralları 3 Ağustos'ta yürürlüğe girdi. Yüksek riskli AI hükümleri 2 Ağustos'ta yürürlüğe girdi.
-  - 2026-08-08, 08-10, 08-17, 08-24: kontrol edildi, gelişme yok.
-  - 2026-08-31 (🟡): Axios'un "AI Act gets real" değerlendirmesi şirket uyum tepkilerini detaylandırdı (Anthropic watermark, Google/Meta taahhüt, OpenAI provenance, Microsoft iç yönetişim). AB AI Ofisi bilgi talep edebiliyor ama henüz ceza/uygulama eylemi yok.
-  - 2026-09-07: kontrol edildi, gelişme yok. NOT: Bu hafta dolaşımda "AB AI Ofisi 3 şirkete 47M€ ceza kesti" iddiası olan birkaç ikincil kaynak bulundu, ancak birincil kaynak taraması bunun gerçekleşmediğini, ileriye dönük bir tahmin makalesinin başlığının yanlış yorumlandığını gösterdi (K1) — rapora ALINMADI.
-  - 2026-09-14: kontrol edildi, gelişme yok (bu hafta yalnızca AB AI Act'e karşı ABD tarafından yazılmış eleştirel bir görüş makalesi bulundu — somut bir uygulama/ceza gelişmesi değil).
+- İlk görülme: 2026-08-07 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-07/08-17 özet: V4-Flash-0731 MIT lisansıyla açık kaynak, 284B MoE, Terminal-Bench ~82.7; V4 Pro GA oldu — SWE-bench Verified %80,6, 1,6T toplam/49B aktif parametre; DeepSeek Harness (dsh) v0.1 yayınlandı):
+  - 2026-08-24 (🟢): dsh resmi reposu 11 günde 189.256 yıldıza ulaştı.
+  - 2026-08-31 (🟡): dsh 205.243 yıldız, 23.773 fork (%8,4 haftalık artış).
+  - 2026-09-07 (⚪): dsh 214.358 yıldız, 25.247 fork (%4,4 haftalık artış).
+  - 2026-09-14 (🟢): DeepSeek, V4.1-Flash modelini yayınladı (10 Eylül) — yerel çok-modlu yetenekler, model adı `deepseek-flash` oldu. dsh 222.968 yıldız, 26.482 fork (%4,0 haftalık artış).
+  - 2026-09-21 (⚪): DeepSeek API resmi changelog'da 10-21 Eylül arasında yeni bir girdi yok — bu hafta yeni model/ürün gelişmesi yok. GitHub API ile doğrulandı: deepseek-ai/deepseek-harness — 231.547 yıldız, 27.765 fork (222.968'den, %3,9 haftalık artış — büyüme yavaş da olsa sürüyor).
 
 ### 17. Prime Agent (Prime Intellect)
-- İlk görülme: 2026-08-08 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük (08-08/08-24 özet: ARC-AGI-3 %95,5, MIT lisanslı, "Continual Harness" mimarisi; yıldız 12.064→16.671→18.055):
-  - 2026-08-31 (⚪): 19.305 yıldız, 2.101 fork (+%6,9).
-  - 2026-09-07 (⚪): GitHub API ile doğrulandı — 20.074 yıldız, 2.196 fork (19.305'ten, %4,0 haftalık artış). Büyüme yavaşlamaya devam ediyor.
-  - 2026-09-14 (⚪): PrimeIntellect-ai/prime-agent GitHub API ile doğrulandı — 20.710 yıldız, 2.265 fork (20.074'ten, %3,2 haftalık artış — büyüme hafif hızlandı).
+- İlk görülme: 2026-08-08 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-08/08-24 özet: ARC-AGI-3 %95,5, MIT lisanslı, "Continual Harness" mimarisi; yıldız 12.064→16.671→18.055→19.305):
+  - 2026-09-07 (⚪): 20.074 yıldız, 2.196 fork (%4,0 haftalık artış).
+  - 2026-09-14 (⚪): 20.710 yıldız, 2.265 fork (%3,2 haftalık artış).
+  - 2026-09-21 (⚪): Bu hafta yeni bir ürün/model duyurusu bulunamadı. GitHub API ile doğrulandı: PrimeIntellect-ai/prime-agent — 21.113 yıldız, 2.311 fork (20.710'dan, %1,9 haftalık artış — büyüme yavaşlamaya devam ediyor).
 
 ### 20. AI ajan mimarisi/hafıza yaklaşımları (Karpathy, MCP spec, AKB, lemmalog, agent-memory, okf-agent-memory)
-- İlk görülme: 2026-08-08 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük (08-08/08-24 özet: Karpathy graph-tabanlı hafıza dokümanı; dnotitia/akb 140→147→154 yıldız):
-  - 2026-08-31 (⚪): akb 156 yıldız. JordyZomer/lemmalog gündeme geldi (212 yıldız, 27 Ağustos, Datalog-tabanlı ajan hafızası).
-  - 2026-09-07 (🟡): dnotitia/akb GitHub API ile doğrulandı — 158 yıldız (156'dan, marjinal). Buna karşın JordyZomer/lemmalog GitHub API ile doğrulandı — 288 yıldız, 25 fork (212'den, %35,8 haftalık artış) — belirgin bir sıçrama. Alanda iki yeni giriş de bu hafta oluşturuldu: tigerless-labs/agent-memory (405 yıldız, 1 Eylül) ve okf-agent-memory/okf-agent-memory (388 yıldız, 5 Eylül — Google OKF v0.2'yi uygulayan, harici veritabanı gerektirmeyen Go tabanlı git-native kalıcı hafıza). Sembolik/yapılandırılmış ve dosya-tabanlı hafıza yaklaşımlarına ilgi çeşitleniyor.
-  - 2026-09-14 (🟢): Bu haftanın en dikkat çekici gelişmesi hafıza repolarındaki büyüme sıçraması. GitHub API ile doğrulandı: tigerless-labs/agent-memory — 1.353 yıldız, 83 fork (405'ten, %234 haftalık artış); okf-memory/okf-agent-memory — 629 yıldız, 44 fork (388'den, %62 haftalık artış); JordyZomer/lemmalog — 308 yıldız, 28 fork (288'den, %6,9 artış); dnotitia/akb — 160 yıldız (158'den, marjinal). Dosya-tabanlı/git-native ajan hafızası kategorisinde belirgin bir ilgi patlaması yaşanıyor.
+- İlk görülme: 2026-08-08 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-08/08-31 özet: Karpathy graph-tabanlı hafıza dokümanı; dnotitia/akb 140→147→154→156 yıldız; JordyZomer/lemmalog gündeme geldi — 212 yıldız, Datalog-tabanlı ajan hafızası):
+  - 2026-09-07 (🟡): akb 158 yıldız. lemmalog 288 yıldız (%35,8 artış). İki yeni giriş: tigerless-labs/agent-memory (405, 1 Eylül) ve okf-agent-memory/okf-agent-memory (388, 5 Eylül).
+  - 2026-09-14 (🟢): Büyük büyüme sıçraması — tigerless-labs/agent-memory 1.353 yıldız (%234 artış); okf-memory/okf-agent-memory 629 yıldız (%62 artış); lemmalog 308 yıldız; akb 160 yıldız.
+  - 2026-09-21 (🟡): Karışık sinyal. GitHub API ile doğrulandı: tigerless-labs/agent-memory — 961 yıldız, 61 fork (1.353'ten, %-29,0 — DÜŞÜŞ; hem geçen haftaki hem bu haftaki rakam API'den, sahte-yıldız temizliği ihtimali var, izleniyor). okf-memory/okf-agent-memory — 708 yıldız, 52 fork (629'dan, %12,6 artış). JordyZomer/lemmalog — 316 yıldız, 30 fork (308'den, %2,6 artış). dnotitia/akb — 160 yıldız, sabit.
 
-### 21. Anthropic Cowork
-- İlk görülme: 2026-08-10 | Son güncelleme: 2026-08-31 | Durum: Aktif
-- Günlük:
-  - 2026-08-10: İlk takip. Claude Code'un ajan yeteneklerini teknik olmayan kullanıcılara taşıyan ürün.
-  - 2026-08-17, 08-24: kontrol edildi, gelişme yok.
-  - 2026-08-31 (🟢): Anthropic, Claude'un chat ve Cowork hafıza sistemlerini birleştirdi (25 Ağustos).
-  - 2026-09-07: kontrol edildi, gelişme yok (bu haftaki büyük Anthropic haberi — Commerce Agents — ayrı konu başlığı altında işlendi, bkz. #2).
-  - 2026-09-14: kontrol edildi, gelişme yok (bu haftaki Anthropic haberleri — Smart Reports, tehdit istihbaratı raporu — #2 altında işlendi).
-
-### 22. Yerel/açık kaynak Cowork & Claude Code alternatifleri (Goose, Eigent)
-- İlk görülme: 2026-08-10 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük (08-10/08-24 özet: Block Goose ilk takip; eigent-ai/eigent 14.898→15.022→15.087 yıldız):
-  - 2026-08-31 (⚪): eigent 15.162 yıldız — hız kesmeye devam ediyor.
-  - 2026-09-07 (⚪): eigent-ai/eigent GitHub API ile doğrulandı — 15.205 yıldız, 1.815 fork (15.162'den, marjinal %0,3 artış — büyüme neredeyse durdu). Çapraz not: Block Goose, bu hafta gündeme gelen GitSpawn RCE açığını 1.44.0 sürümünde düzeltenler arasında (bkz. #12).
-  - 2026-09-14 (⚪): eigent-ai/eigent GitHub API ile doğrulandı — 15.269 yıldız, 1.823 fork (15.205'ten, %0,4 artış — büyüme neredeyse tamamen durdu).
-
-### 23. Salesforce Slackbot'un AI ajanına dönüştürülmesi (Claudeforce)
-- İlk görülme: 2026-08-10 | Son güncelleme: 2026-08-31 | Durum: Aktif
-- Günlük:
-  - 2026-08-10: İlk takip. Slackbot, AI ajanına dönüştürüldü.
-  - 2026-08-17, 08-24: kontrol edildi, gelişme yok.
-  - 2026-08-31 (🟢): Salesforce ve Anthropic "Claudeforce" ortaklığını duyurdu (26 Ağustos) — iki yönlü entegrasyon (Salesforce in Claude / Claude in Salesforce).
-  - 2026-09-07: kontrol edildi, gelişme yok (bu hafta bulunan haberler yalnızca 26 Ağustos duyurusunun yankıları/analizleri, yeni bir gelişme yok).
-  - 2026-09-14: kontrol edildi, gelişme yok.
+### 22. Yerel/açık kaynak Cowork & Claude Code alternatifleri (Goose, Eigent, ZCode)
+- İlk görülme: 2026-08-10 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-10/08-31 özet: Block Goose ilk takip; eigent-ai/eigent 14.898→15.022→15.087→15.162 yıldız, büyüme hız kesiyor):
+  - 2026-09-07 (⚪): eigent 15.205 yıldız, 1.815 fork (%0,3 artış — büyüme neredeyse durdu). Çapraz not: Goose, GitSpawn RCE açığını 1.44.0'da düzeltenler arasında (bkz. #12).
+  - 2026-09-14 (⚪): eigent 15.269 yıldız, 1.823 fork (%0,4 artış).
+  - 2026-09-21 (🟡): Çapraz not — Z.ai (Zhipu), kodlama ajanı ZCode'u açık kaynağa açtı (20 Eylül; bkz. #32, yeni ayrı konu) — bu kategoriye güçlü yeni bir rakip. eigent-ai/eigent GitHub API ile doğrulandı — 15.354 yıldız, 1.828 fork (15.269'dan, %0,6 artış — büyüme neredeyse tamamen durdu).
 
 ### 24. Yeni GitHub AI/agent repoları (haftalık tarama)
-- İlk görülme: 2026-08-10 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük:
-  - 2026-08-10, 08-17, 08-24, 08-31: önceki taramalar (bkz. geçmiş commit'ler).
-  - 2026-09-07: 1-7 Eylül'de oluşturulanlar (yıldızlar GitHub API ile doğrulandı, created:>2026-08-31 stars:>100 llm/agent/ai filtresi): anthropics/commerce-agents (2.275, resmi Anthropic reposu — bkz. #2), Albert-Weasker/niubigeo (621, açık kaynak AI marka görünürlüğü/rakip raporları), tigerless-labs/agent-memory (405), okf-memory/okf-agent-memory (388), kydlikebtc/awesome-grokbot (331, Grok Bot paylaşım kataloğu), LunarXuan/image-prompt-reverse (308, Codex için görsel prompt tersine mühendislik skill'i), adtexterry-lgtm/unigit-ecosystem (307), BoardUI/boardui (261, ajan arayüzleri için React tasarım sistemi), gozen3ji/consulting-pptx-skill (249, Claude Code için Japonca PPTX üretim skill'i), joeseesun/qiaomu-book-reader (235, Obsidian içinde AI destekli kitap okuma), Agenta-AI/awesome-ai-agent-platforms (234, küratörlü açık kaynak ajan platformları listesi), techjanitor/botmaker (223), jarrenrocks/bot-crossing (180, AI ajanları için video oyunu), dreamers-laboratory/agent-fleet-manager (171), Mercor-Intelligence/ApexAgents-SkyRL-Recipe (156).
-  - 2026-09-14: 8-14 Eylül'de oluşturulanlar (yıldızlar GitHub API ile doğrulandı, created:>2026-09-07 stars:>100 llm/agent/ai filtresi): Edge0-AI/Edge0 (1.629, Apple Silicon için MoE akış çıkarım motoru — SSD expert offload + Recover-LoRA + prerouter routing prediction, Apache-2.0), SpaceDudem/text-humanizer (737, AI-üretimi metni "insansılaştırıp" GPTZero/Turnitin gibi dedektörleri atlatma aracı), Colafornia/short-video-generator-AI (723, YouTube videolarını viral kısa videolara çeviren araç), eternityspring/reelbench-skills (577, AI video analiz/üretim skill'i — Claude Code), rizqinrr/viserys-agent (630), kruzovic7/ai-data-extractor (461, Claude Code/Cursor/Windsurf/Aider/Cline sohbet geçmişi çıkarıcı), zjwzcx/Awesome-Astra-Embodied-AI (334, GPT-6 Astra'yı gömülü/robotik AI'ya uygulama listesi — bkz. #26), deepseek-ai/DeepSelect (333, DeepSeek Sparse Attention için TopK kernelleri — resmi DeepSeek reposu), deepseek-ai/deepseek-recipe (323, resmi DeepSeek reposu), deepseek-ai/DeepJIT (303, resmi DeepSeek reposu), Phyzicalorg/Phyzical_org (282, elizaOS uyumlu gömülü-AI teleoperasyon veri platformu), yudaprasetya007/routeVSCODE (238, VSCode Copilot Chat için sıfır-yeniden-yükleme model değiştirici/yerel proxy), Qiuner/birdview (218, kod değişikliği öncesi mimariyi haritalayan geliştirici aracı), VaderChen/YourDesk (202, MCP entegrasyonlu uzak masaüstü — AI ajanlarının bilgisayarı kontrol etmesi için).
+- İlk görülme: 2026-08-10 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-10/08-31: önceki taramalar, bkz. geçmiş commit'ler):
+  - 2026-09-07: 1-7 Eylül (stars:>100 filtresi): commerce-agents (2.275, bkz. #2), niubigeo (621), agent-memory (405), okf-agent-memory (388), awesome-grokbot (331), image-prompt-reverse (308), unigit-ecosystem (307), boardui (261), consulting-pptx-skill (249), qiaomu-book-reader (235), awesome-ai-agent-platforms (234), botmaker (223), bot-crossing (180), agent-fleet-manager (171), ApexAgents-SkyRL-Recipe (156).
+  - 2026-09-14: 8-14 Eylül (stars:>100 filtresi): Edge0 (1.629, Apple Silicon MoE çıkarım motoru), text-humanizer/SpaceDudem (737), short-video-generator-AI (723), viserys-agent (630), reelbench-skills (577), ai-data-extractor (461), Awesome-Astra-Embodied-AI (334, bkz. #26), DeepSelect (333), deepseek-recipe (323), DeepJIT (303), Phyzical_org (282), routeVSCODE (238), birdview (218), YourDesk (202).
+  - 2026-09-21 (🟢): 15-21 Eylül'de oluşturulanlar (stars:>100 llm/agent/ai filtresi, API doğrulu) — haftanın en dikkat çekici deseni: yeni repoların büyük bölümü TypeSafe AI'nin "Jev" System One modeli etrafında oluşan bir ekosistem (bkz. #31). zai-org/ZCode (3.701, Z.ai'nin yeni açık kaynak kodlama ajanı, bkz. #32), mcncarl/jianying-headless (2.126, Jianying video düzenleme agent skill'i), jarrodwatts/jev-trader (1.612, Jev tabanlı kripto trading ajanı), korcarc/text-humanizer (737, AI metin "insansılaştırma"/dedektör atlatma — SpaceDudem'in geçen hafta bahsedilen aynı isimli reposundan FARKLI bir depo), yibie/awesome-jev (706, Jev ekosistemi küratörlü listesi), v-modal/awesome-jev-tools (580), pallavi-shekhar/ai-engineering-interview-questions-company-wise (567), Continuum-AI-Corp/OrcaBonsai-27B-Uncensored (505, ağırlık değiştirmeden davranışsal ablasyonla sansürsüzleştirme), rmalde/minecraft-agent (332, Jev kontrollü Minecraft ajanı), fhshaik/typesafe-mario (306, Jev ile Super Mario oynayan ajan), kerpopule/hermes-jev-skills (303), cobanov/awesome-jev (280), sutro-sh/jev-align (248), huangbai-AI/post-production-skill (223), ruc-datalab/EvoOntology (220, bkz. Bölüm 4/Çalışma Yöntemleri), kitze/skillbox (218), wuyoscar/jev-skill (217), Oldcircle/geo-sleuth (213), coldteadotai/abide (196), NiazMorshed2007/jev-review (187).
 
 ### 25. AI imza/watermark temizleme araçları ve tartışma
-- İlk görülme: 2026-08-17 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük:
-  - 2026-08-17: İlk takip. guillaumemeyer/watermarks-remover 6 günde 12.177 yıldıza ulaştı.
+- İlk görülme: 2026-08-17 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-17 özet: guillaumemeyer/watermarks-remover 6 günde 12.177 yıldıza ulaştı):
   - 2026-08-24 (🟢): 17.557 yıldız (+%44). Rakip ShadowAqueduct/watermark-remover 1 günde 760 yıldıza ulaştı.
-  - 2026-08-31 (🟡): guillaumemeyer 19.536 yıldız (+%11,3). ShadowAqueduct 836 yıldız (760'tan, ivme kesildi).
-  - 2026-09-07 (🟡): guillaumemeyer/watermarks-remover GitHub API ile doğrulandı — 21.055 yıldız, 2.425 fork (19.536'dan, %7,8 haftalık artış). DİKKAT: ShadowAqueduct/watermark-remover artık GitHub API'de bulunamıyor (`404 Not Found`, hem doğrudan repo sorgusu hem de arama API'si üzerinden doğrulandı) — repo silinmiş veya kullanıcı hesabı kaldırılmış/yeniden adlandırılmış görünüyor. WebFetch ile eski bir önbellek sayfası hâlâ görüntülenebiliyor (760 yıldız gösteriyor, muhtemelen bayat veri) ama API kesin: repo artık mevcut değil. Ekosistemde onlarca küçük "watermarks-remover" fork/türevi var (çoğu <15 yıldız), tekel oluşmadı.
-  - 2026-09-14 (🟡): guillaumemeyer/watermarks-remover GitHub API ile doğrulandı — 21.934 yıldız, 2.527 fork (21.055'ten, %4,2 haftalık artış — büyüme yavaş ama istikrarlı sürüyor). ShadowAqueduct/watermark-remover hâlâ GitHub'da bulunamıyor.
+  - 2026-08-31 (🟡): guillaumemeyer 19.536 yıldız (+%11,3). ShadowAqueduct 836 yıldız, ivme kesildi.
+  - 2026-09-07 (🟡): guillaumemeyer 21.055 yıldız, 2.425 fork (%7,8 artış). ShadowAqueduct artık GitHub API'de bulunamıyor (muhtemelen silindi).
+  - 2026-09-14 (🟡): guillaumemeyer 21.934 yıldız, 2.527 fork (%4,2 artış).
+  - 2026-09-21 (⚪): Bu hafta yeni bir gelişme yok, yalnızca büyüme. GitHub API ile doğrulandı: guillaumemeyer/watermarks-remover — 22.462 yıldız, 2.595 fork (21.934'ten, %2,4 haftalık artış — büyüme yavaşlıyor).
 
 ### 26. GPT-5.6 → GPT-6 Astra (OpenAI)
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-07 | Durum: Aktif
-- Günlük:
-  - 2026-07-27: İlk takip. 2-9 Temmuz duyurusu: Sol (amiral gemisi), Terra, Luna.
-  - 2026-08-24 (🟡): GPT-5.6 Sol/Luna için "effort slider" güncellemesi (6 Ağustos); halüsinasyon oranında ~%60 azalma iddiası.
+- Günlük (07-27 özet: 2-9 Temmuz duyurusu — Sol (amiral gemisi), Terra, Luna):
+  - 2026-08-24 (🟡): GPT-5.6 Sol/Luna için "effort slider" güncellemesi; halüsinasyon oranında ~%60 azalma iddiası.
   - 2026-08-31: kontrol edildi, gelişme yok.
-  - 2026-09-07 (🟢): OpenAI, GPT-6 Astra'yı yayınladı (3-4 Eylül; OpenAI'nin resmi sayfası + CNBC + Al Jazeera + Axios ile doğrulandı) — "dünyanın en zeki ve en hizalı modeli" olarak tanıtıldı. Kademeli erişim: ChatGPT Plus/Pro/Business/Enterprise'a günler içinde, ayrıca API/Azure/Bedrock üzerinden. Benchmark'lar (OpenAI'nin resmi sayfasından): ARC-AGI-3 %99,9 (seviyelerin %96'sında insan paritesi), FrontierMath Tier 4 %97,6, ExploitBench %100, OSWorld 2.0 (computer use) %72,6 (öncekinden ~%47 daha az sürede), Terminal-Bench 4.0 %57,9. Fiyatlandırma: API standart $10/milyon giriş, $50/milyon çıkış token; hızlı mod 2x hız/2x fiyat. Güvenlik: yetkisiz görevleri reddetme oranı %48'den %100'e çıktı; yanlış hizalanma izleme sistemi eklendi. Duyuru, Temmuz'daki Hugging Face'e yönelik AI-öncülüğünde siber saldırı sonrası artan güvenlik/etik tartışması gölgesinde yapıldı — uzmanlar yetenek artışı ile hizalama/kontrol arasındaki açığın kapanmadığını belirtiyor.
-  - 2026-09-14: kontrol edildi, doğrudan yeni model/ürün gelişmesi yok (ilgi sürüyor — bu hafta GitHub'da "Awesome-Astra-Embodied-AI" adlı bir listeleme reposu gündeme geldi, bkz. #24).
+  - 2026-09-07 (🟢): GPT-6 Astra yayınlandı (3-4 Eylül) — ARC-AGI-3 %99,9, FrontierMath Tier 4 %97,6, ExploitBench %100. API $10/$50 per MTok.
+  - 2026-09-14: kontrol edildi, doğrudan yeni gelişme yok (GitHub'da "Awesome-Astra-Embodied-AI" listesi gündeme geldi, bkz. #24).
+  - 2026-09-21: kontrol edildi, doğrudan yeni model/ürün gelişmesi yok. NOT: 7 Eylül tarihli (pencere dışı) bir CSO Online haberinde Sam Altman rollout'u "dağınık" (messy) olarak nitelendirmiş ve kurumsal erişimin gecikmesinden özür dilemişti — bu hafta bunun devamı niteliğinde yeni bir haber bulunamadı.
 
 ### 27. Vercel fx — minik açık kaynak kodlama ajanı
-- İlk görülme: 2026-08-24 | Son güncelleme: 2026-09-14 | Durum: Aktif
-- Günlük:
-  - 2026-08-24: İlk takip. Vercel Labs, Zig ile yazılmış minimal kodlama ajanı "fx"i açık kaynak yaptı.
+- İlk görülme: 2026-08-24 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük (08-24 özet: Vercel Labs, Zig ile yazılmış minimal kodlama ajanı "fx"i açık kaynak yaptı):
   - 2026-08-31 (🟡): 2.622 yıldız, 300 fork (+%15,5).
-  - 2026-09-07 (🟡): GitHub API ile doğrulandı — 2.786 yıldız, 319 fork (2.622'den, %6,3 haftalık artış). Topluluk türevleri artmaya devam ediyor.
-  - 2026-09-14 (🟡): vercel-labs/fx GitHub API ile doğrulandı — 2.947 yıldız, 336 fork (2.786'dan, %5,8 haftalık artış).
+  - 2026-09-07 (🟡): 2.786 yıldız, 319 fork (%6,3 artış).
+  - 2026-09-14 (🟡): 2.947 yıldız, 336 fork (%5,8 artış).
+  - 2026-09-21 (🟡): Bu hafta yeni bir ürün gelişmesi yok, yalnızca büyüme. GitHub API ile doğrulandı: vercel-labs/fx — 3.088 yıldız, 352 fork (2.947'den, %4,8 haftalık artış).
 
-### 28. Meta Muse Spark (1.1→1.3) / Muse Code / Meta Model API
-- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-07 | Durum: Aktif (arşivden döndü)
-- Günlük (arşivlenmeden önceki geçmiş):
-  - 2026-07-27: İlk takip. 1M token bağlam, Meta'nın ilk ücretli model API'si, computer-use desteği.
-  - 2026-08-08 (🟡): Muse Spark 1.2 tabanlı "Meta Muse Code" duyuruldu.
-  - 2026-08-10, 08-17, 08-24: kontrol edildi, yeni gelişme yok.
-  - 2026-08-31: kontrol edildi, gelişme yok. 23 gün gelişme yok → arşivlendi.
+### 28. Meta Muse ailesi (Muse Spark modeli, Muse Code, Muse kişisel ajan uygulaması, Model API)
+- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük özet (arşivlenmeden önce, 07-27/08-31): 1M token bağlam ve Meta'nın ilk ücretli model API'si ilk takip edildi (07-27); Muse Spark 1.2 tabanlı "Meta Muse Code" duyuruldu (08-08); 23 gün gelişme yok → arşivlendi (08-31).
 - Günlük (yeniden gündeme geldikten sonra):
-  - 2026-09-07 (🟢) — YENİDEN GÜNDEMDE: Meta, Muse Spark 1.3'ü yayınladı (2 Eylül; Meta AI Research'in resmi blogu + Bloomberg/VentureBeat/Axios/MarkTechPost ile doğrulandı). Vurgu ham yetenek artışı değil verimlilik — resmi duyuruya göre karşılaştırılabilir mühendislik görevlerini bitirmek için önceki sürüme (1.2) göre ~%20 daha az araç çağrısı ve ~%25 daha az token kullanıyor; daha uzun ufuklu ajan iş akışları, geri döndürülemez eylemlerde daha iyi yargı ve güçlendirilmiş adversarial sağlamlık içeriyor. Muse Code ve dev.meta.ai üzerindeki Meta Model API üzerinden erişilebiliyor. NOT (K1): Bazı ikincil kaynaklar (ör. tech-insider.org) spesifik benchmark puanları (DeepSWE v1.1 75,4; Terminal-Bench 2.1 88,8 vb.) verdi, ancak resmi Meta blog özeti bu rakamları teyit etmedi ("spesifik sayısal puan verilmedi") — bu yüzden spesifik puanlar rapora ALINMADI, yalnızca resmi kaynakla örtüşen %20/%25 verimlilik iddiası kullanıldı.
+  - 2026-09-07 (🟢) — YENİDEN GÜNDEMDE: Muse Spark 1.3 yayınlandı (2 Eylül) — önceki sürüme göre ~%20 daha az araç çağrısı, ~%25 daha az token kullanımı (resmi Meta AI Research blogu). NOT (K1): İkincil kaynaklardaki spesifik benchmark puanları resmi blogla teyit edilemedi, rapora alınmadı.
   - 2026-09-14: kontrol edildi, gelişme yok.
+  - 2026-09-21 (🟢): Muse Spark modelini temel alan tüketici odaklı "Muse" kişisel AI ajanı uygulaması duyuruldu (8 Eylül; resmi about.fb.com duyurusu + Bloomberg + TechCrunch + Axios ile doğrulandı). E-posta gönderme, seyahat rezervasyonu, form doldurma, kullanıcı adına pazarlık gibi görevleri uygulama kapalıyken bile sürdürebiliyor; Muse app, WhatsApp veya muse.ai üzerinden erişilebiliyor, Link by Stripe ile güvenli ödeme ve izole "Muse Secure VM" içinde çalışıyor. Fiyatlandırma "çoğu ihtiyaç için ücretsiz, daha fazlası için abonelik" olarak açıklandı, kesin tier bilgisi verilmedi. ABD'de iOS/Android/web'de kullanıma açıldı, AI gözlük desteği yakında geliyor. NOT: Bu duyuru 8 Eylül tarihli olup geçen haftanın (8-14 Eylül) tarama penceresindeydi ama atlanmış — bu hafta geriye dönük fark edildi (K3).
 
 ### 29. Mistral AI 3 milyar € Series D turu (Samsung liderliğinde) — Avrupa'nın "sovereign AI" hamlesi
 - İlk görülme: 2026-09-14 | Son güncelleme: 2026-09-14 | Durum: Aktif
 - Günlük:
-  - 2026-09-14 (🟢): Mistral AI, Samsung Electronics liderliğinde (Scaleup Europe Fund/EQT ve mevcut yatırımcı PSG Equity ortak liderliğinde) 3 milyar € tutarında Series D turu kapattığını duyurdu (8 Eylül; Mistral'ın resmi haber sayfası + TechCrunch ile doğrulandı). Tur sonrası şirket değerlemesi 21 milyar €'nun üzerine çıktı. Resmi açıklamaya göre bu, bir Avrupa teknoloji şirketinin şimdiye kadar gerçekleştirdiği en büyük özkaynak fonlama turu (şirketin 3 yıllık geçmişinde). Fon frontier araştırmanın genişletilmesine, model eğitimi için hesaplama kapasitesine ve şirketin faaliyet gösterdiği 20 ülkedeki altyapı ölçeklendirmesine ayrılacak.
+  - 2026-09-14 (🟢): Mistral AI, Samsung liderliğinde 3 milyar € Series D turu kapattığını duyurdu (8 Eylül) — değerleme 21 milyar €'nun üzerine çıktı, Avrupa teknoloji tarihinin en büyük özkaynak turu.
+  - 2026-09-21: kontrol edildi, gelişme yok (bu tura dair yeni bir gelişme bulunamadı).
 
 ### 30. Grok 4.6 → 4.7 (xAI)
-- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-14 | Durum: Aktif (arşivden döndü)
-- Günlük (arşivlenmeden önceki geçmiş):
-  - 2026-07-27: İlk takip. 1.5T MoE, Cursor ajan verisiyle eğitildi, Terminal-Bench 2.1 %83.3.
-  - 2026-08-08 (🟡): Grok 4.6 ~7 Ağustos'a hedeflendi.
-  - 2026-08-10 (🟡): Hedef tarih geçti. Musk 10-14 Ağustos haftasına kaydırdı.
-  - 2026-08-17 (🟢): Grok 4.6 resmen çıktı (12 Ağustos). $2/$6/$0.50 per MTok. xAI'nin 61 puan/1753 ELO iddiaları bağımsız doğrulanmadı.
-  - 2026-08-24, 08-31: kontrol edildi, gelişme yok (Grok 5 için doğrulanmış tarih yok).
-  - 2026-09-07: kontrol edildi, gelişme yok. Bu hafta yalnızca eski (temmuz/ağustos tarihli) "Grok 5 ne zaman çıkar" tahmin makaleleri bulundu, yeni bir doğrulanmış gelişme yok. Çapraz not: Grok Build bu hafta GitSpawn RCE açığı bakımından hâlâ yamanmamış ajanlar arasında sayıldı (bkz. #12), ancak bu Grok 4.6 modelinin kendisiyle ilgili bir gelişme değil. 21 gün gelişme yok → arşivlendi.
+- İlk görülme: 2026-07-27 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük özet (arşivlenmeden önce, 07-27/08-31): 1.5T MoE, Terminal-Bench 2.1 %83.3 ilk takip (07-27); Grok 4.6 resmen çıktı — $2/$6/$0.50 per MTok (08-17); Grok 5 için doğrulanmış tarih yok, 21 gün gelişme yok → arşivlendi (08-31).
 - Günlük (yeniden gündeme geldikten sonra):
-  - 2026-09-14 (🟢) — YENİDEN GÜNDEMDE: İki gelişme: (1) Microsoft, Copilot'a (Word/Excel/PowerPoint) Grok modellerini ekledi (12 Eylül; Microsoft'un resmi Tech Community blogu ile doğrulandı) — varsayılan olarak kapalı, AB/EFTA/İngiltere önizlemeye dahil değil, modeller Microsoft altyapısı dışında barındırılıyor, kiracı düzeyinde veri izolasyonu var. (2) Grok 4.7 beşinci kez hedef tarihini kaçırdı — Musk 11 Eylül'de X'te modelin "birkaç gün daha pişmesi" gerektiğini, yanıt uzunluğuna aşırı reinforcement-learning cezası verilmesinin görevlerin erken bırakılmasına yol açtığını belirtti; yeni bir tarih verilmedi. NOT (K1): Grok 4.7'ye dair hiçbir teknik özellik (model ID, fiyat, bağlam penceresi, benchmark) resmi olarak doğrulanmadı — bilgiler yalnızca Musk'ın X gönderilerine dayanıyor, docs.x.ai'de belge yok; bu yüzden rapora sayısal/teknik iddia olarak ALINMADI.
+  - 2026-09-14 (🟢) — YENİDEN GÜNDEMDE: Microsoft, Copilot'a (Word/Excel/PowerPoint) Grok modellerini ekledi (12 Eylül). Grok 4.7 beşinci kez hedef tarihini kaçırdı — Musk resmi bir tarih vermedi (yalnızca X paylaşımları, docs.x.ai'de kayıt yok).
+  - 2026-09-21 (🟡): Grok 4.7 hâlâ resmi olarak yayınlanmadı. Birkaç düşük güvenilirlikli ikincil kaynak (ör. startupfortune.com) Musk'ın Grok 4.7'yi "rafa kaldırıp" doğrudan Grok 4.8'e geçeceğini iddia ediyor, ancak bu iddia ne xAI'nin resmi kanallarında ne de birinci kademe haber kaynaklarında doğrulanabildi — K1 gereği kesin bir iddia olarak rapora ALINMADI, yalnızca "gecikme sürüyor" bilgisi kullanıldı.
+
+### 31. TypeSafe AI — Jev / "System One Models"
+- İlk görülme: 2026-09-21 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük:
+  - 2026-09-21 (🟢) — İLK TAKİP: TypeSafe AI, ilk "System One Model"i Jev'i tanıttı (15 Eylül, erken erişim; resmi typesafe.ai blogu + MarkTechPost/DataCamp/LangChain/Vercel haberleriyle doğrulandı). Geleneksel LLM'lerin aksine, tipli/kalibre edilmiş kararları paralel ve milisaniyeler içinde üretiyor; otomasyon/karar-verme görevlerine odaklı (sohbet değil). Resmi kaynağa göre System One görevlerinde frontier LLM'lere kıyasla 40-200x daha hızlı (70ms-500ms'ye karşı 3-329 saniye) ve iş akışı değerlendirmelerinde 444,6x daha ucuz olduğu iddia ediliyor; tip hatası/halüsinasyon "matematiksel olarak garantili sıfır" deniyor. Fiyatlandırma: $0,042/MTok giriş, çıkış ücretsiz. Lisans/kaynak modeli belirsiz — kod tabanı açık kaynak değil gibi görünüyor (typesafeai/jev adında bir GitHub reposu bulunamadı), erken erişim programı üzerinden sunuluyor. Hafta içinde GitHub'da Jev etrafında organik olarak onlarca bağımsız araç/entegrasyon reposu ortaya çıktı (bkz. #24) — haftanın en büyük ekosistem hareketlenmesi.
+
+### 32. Z.ai (Zhipu) — ZCode kodlama ajanı
+- İlk görülme: 2026-09-21 | Son güncelleme: 2026-09-21 | Durum: Aktif
+- Günlük:
+  - 2026-09-21 (🟢) — İLK TAKİP: Z.ai (Zhipu AI), kodlama ajanı ZCode'un kod tabanını açık kaynağa açtı (20 Eylül; resmi zai-org/ZCode GitHub reposu — "feat: open source" commit'i + repo oluşturulma tarihi ile doğrulandı). ZCode, GLM ailesi modelleriyle çalışan, Cursor/Claude Code/GitHub Copilot'a rakip bir ajan geliştirme ortamı; resmi changelog'a göre en son sürüm 3.14.0 (19 Eylül) alt-ajanları tek script ile orkestre eden "dynamic workflows" özelliğini ekledi. GitHub API ile doğrulandı: zai-org/ZCode — 3.701 yıldız, 968 fork (<1 günde, repo 20 Eylül'de oluşturuldu). NOT: ZCode uygulamasının kendisi Temmuz 2026'dan beri mevcuttu (GLM-5.2 ile); bu haftaki gelişme spesifik olarak kod tabanının açık kaynağa açılması.
 
 ## Arşivlenmiş Konular
 
+### AB Yapay Zeka Yasası (AI Act) uygulama takvimi
+- İlk görülme: 2026-08-07 | Son güncelleme: 2026-08-31 | Arşivlenme: 2026-09-21 (21+ gün gelişme yok)
+- Günlük (arşivlenmeden önce): 08-07: Madde 50 şeffaflık kuralları 3 Ağustos'ta, yüksek riskli AI hükümleri 2 Ağustos'ta yürürlüğe girdi. 08-08 – 08-24: gelişme yok. 08-31 (🟡): Axios'un "AI Act gets real" değerlendirmesi şirket uyum tepkilerini detaylandırdı; AB AI Ofisi bilgi talep edebiliyor ama henüz ceza/uygulama eylemi yok. 09-07: kontrol edildi, gelişme yok (dolaşımdaki "AB AI Ofisi 3 şirkete 47M€ ceza kesti" iddiası doğrulanamadı, alınmadı — K1). 09-14: kontrol edildi, gelişme yok. 09-21: 21 gün gelişme yok → arşivlendi (bu hafta da yalnızca görüş makaleleri/eski haberler bulundu, somut bir icra/ceza gelişmesi yok).
+
+### Anthropic Cowork
+- İlk görülme: 2026-08-10 | Son güncelleme: 2026-08-31 | Arşivlenme: 2026-09-21 (21+ gün gelişme yok)
+- Günlük (arşivlenmeden önce): 08-10: ilk takip. 08-17, 08-24: gelişme yok. 08-31 (🟢): chat/Cowork hafıza sistemleri birleştirildi (25 Ağustos). 09-07 – 09-21: kontrol edildi, gelişme yok (bu dönemin büyük Anthropic haberleri — Commerce Agents, Smart Reports, self-improvement duyurusu — #2 altında işlendi).
+
+### Salesforce Slackbot'un AI ajanına dönüştürülmesi (Claudeforce)
+- İlk görülme: 2026-08-10 | Son güncelleme: 2026-08-31 | Arşivlenme: 2026-09-21 (21+ gün gelişme yok)
+- Günlük (arşivlenmeden önce): 08-10: ilk takip. 08-17, 08-24: gelişme yok. 08-31 (🟢): Salesforce-Anthropic "Claudeforce" ortaklığı duyuruldu (26 Ağustos). 09-07 – 09-21: kontrol edildi, gelişme yok (yalnızca 26 Ağustos duyurusunun yankıları/analizleri bulundu).
+
 ### ChatGPT for Work & GPT-Live (OpenAI ürünleri)
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-07-27 | Arşivlenme: 2026-08-17 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-07-27: İlk takip. Codex+ChatGPT birleşimi, site barındırma, tam-dupleks sesli asistan.
-  - 2026-08-08, 08-10, 08-17: kontrol edildi, gelişme yok.
-  - 2026-08-24, 08-31, 09-07: kontrol edildi, gelişme yok (arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 07-27: ilk takip — Codex+ChatGPT birleşimi, site barındırma, tam-dupleks sesli asistan. 08-08 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor).
 
 ### OptMem — AI ajanları için hafıza aracı
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-07-27 | Arşivlenme: 2026-08-17 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-07-27: İlk takip. VictorTaelin; 426 token'lık prompt + script ile minimalist kalıcı hafıza.
-  - 2026-08-08, 08-10, 08-17: kontrol edildi, gelişme yok.
-  - 2026-08-24, 08-31, 09-07: kontrol edildi, gelişme yok (arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 07-27: ilk takip — VictorTaelin, 426 token'lık prompt + script ile minimalist kalıcı hafıza. 08-08 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor).
 
 ### Sakana AI — Fugu-Cyber
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-07-27 | Arşivlenme: 2026-08-17 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-07-27: İlk takip. CyberGym %86.9, CTI-REALM %72.1.
-  - 2026-08-08, 08-10, 08-17: kontrol edildi, gelişme yok.
-  - 2026-08-24, 08-31, 09-07: kontrol edildi, gelişme yok (arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (bu hafta Sakana için yeni bir model/araştırma duyurusu bulunamadı; arşivde kalıyor).
+- Günlük: 07-27: ilk takip — CyberGym %86.9, CTI-REALM %72.1. 08-08 – 09-14: kontrol edildi, gelişme yok. 09-21: kontrol edildi, gelişme yok (bu hafta yalnızca pencere dışı — 10 Eylül tarihli — bir Sumitomo ortaklığı haberi bulundu; arşivde kalıyor).
 
 ### Kimi K3 / K4 (Moonshot AI)
 - İlk görülme: 2026-07-27 | Son güncelleme: 2026-08-08 | Arşivlenme: 2026-08-31 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-07-27: İlk takip. 2.8T parametre, 1M bağlam.
-  - 2026-08-08 (🟢): Açık ağırlıkların 27 Temmuz'da yayınlandığı doğrulandı.
-  - 2026-08-10, 08-17, 08-24: kontrol edildi, gelişme yok.
-  - 2026-08-31: kontrol edildi, gelişme yok. 23 gün gelişme yok → arşivlendi.
-  - 2026-09-07: kontrol edildi, gelişme yok (Kimi K4 için yalnızca Nvidia Blackwell çip talebine dair 28 Temmuz tarihli eski haberler var — yeni model gelişmesi değil, arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (Kimi K4 hâlâ doğrulanmış bir sürüm tarihine sahip değil — tüm kaynaklar tahmin/spekülasyon niteliğinde; arşivde kalıyor).
+- Günlük: 07-27: ilk takip — 2.8T parametre, 1M bağlam. 08-08 (🟢): açık ağırlıklar 27 Temmuz'da yayınlandı. 08-10 – 08-24: gelişme yok. 08-31: 23 gün gelişme yok → arşivlendi. 09-07 – 09-21: kontrol edildi, gelişme yok (Kimi K4 hâlâ doğrulanmış bir sürüm tarihine sahip değil, tüm kaynaklar tahmin/spekülasyon niteliğinde).
 
 ### OpenAI Astra (matematik/araştırma modeli — GPT-6 Astra ile KARIŞTIRILMASIN)
 - İlk görülme: 2026-08-07 | Son güncelleme: 2026-08-10 | Arşivlenme: 2026-08-31 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-08-07: ~2.000 dolarlık hesaplamayla 10 açık problemi Lean kanıtlarıyla çözdü.
-  - 2026-08-08 (🟢): 10 çözülememiş problem çözüldü; Fields madalyalı Jacob Tsimerman OpenAI'ye katıldı.
-  - 2026-08-10 (🟢): Kanıtlar tartışmalı bulundu.
-  - 2026-08-17, 08-24: kontrol edildi, gelişme yok.
-  - 2026-08-31: kontrol edildi, gelişme yok. 21 gün gelişme yok → arşivlendi.
-  - 2026-09-07: kontrol edildi, gelişme yok. NOT: Bu hafta OpenAI'nin yeni amiral gemisi modeli "GPT-6 Astra" adıyla piyasaya çıktı (bkz. #26) — isim burada arşivlenen matematik-araştırma projesiyle aynı ama resmi kaynaklarda bu iki "Astra" arasında doğrudan bir bağlantı doğrulanamadı; karıştırılmaması için bu not eklendi.
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 08-07: ~2.000 dolarlık hesaplamayla 10 açık problem çözüldü. 08-08 (🟢): Fields madalyalı Jacob Tsimerman OpenAI'ye katıldı. 08-10 (🟢): kanıtlar tartışmalı bulundu. 08-17 – 08-24: gelişme yok. 08-31: 21 gün gelişme yok → arşivlendi. 09-07 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor; GPT-6 Astra adıyla aynı isim ama resmi kaynaklarda doğrudan bağlantı doğrulanamadı — karıştırılmasın).
 
 ### AI ajan ödeme altyapısı (agent payments)
 - İlk görülme: 2026-08-07 | Son güncelleme: 2026-08-07 | Arşivlenme: 2026-08-31 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-08-07: Cloudflare "Wallets" ve MoonPay "PayBox" (x402 standardı) duyuruldu.
-  - 2026-08-10, 08-17, 08-24, 08-31: kontrol edildi, gelişme yok. 24 gün gelişme yok → arşivlendi.
-  - 2026-09-07: kontrol edildi, gelişme yok (arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 08-07: Cloudflare "Wallets" ve MoonPay "PayBox" (x402 standardı) duyuruldu. 08-10 – 08-31: 24 gün gelişme yok → arşivlendi. 09-07 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor).
 
 ### Mistral Shieldstral
 - İlk görülme: 2026-08-08 | Son güncelleme: 2026-08-08 | Arşivlenme: 2026-08-31 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-08-08: İlk takip. 3B parametreli çok modlu güvenlik sınıflandırıcı.
-  - 2026-08-10, 08-17, 08-24, 08-31: kontrol edildi, gelişme yok. 23 gün gelişme yok → arşivlendi.
-  - 2026-09-07: kontrol edildi, gelişme yok (Mistral için bu hafta yalnızca spekülatif "Large 3" söylentileri bulundu, doğrulanmış bir duyuru yok — arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, Shieldstral ürününün kendisine dair gelişme yok. NOT: Bu hafta Mistral hakkında büyük bir haber vardı (3 milyar € Series D turu) ama bu Shieldstral'la ilgili değil, ayrı bir konu olarak eklendi (bkz. #29).
+- Günlük: 08-08: ilk takip — 3B parametreli çok modlu güvenlik sınıflandırıcı. 08-10 – 08-31: 23 gün gelişme yok → arşivlendi. 09-07 – 09-21: kontrol edildi, Shieldstral ürününün kendisine dair gelişme yok (Mistral'ın 3 milyar € Series D turu ayrı bir konu, bkz. #29).
 
 ### Çok modlu üretici modeller (DiffusionGemma, MiniMax H3)
 - İlk görülme: 2026-08-08 | Son güncelleme: 2026-08-08 | Arşivlenme: 2026-08-31 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-08-08: DiffusionGemma ve MiniMax H3 ilk takip.
-  - 2026-08-10, 08-17, 08-24, 08-31: kontrol edildi, gelişme yok. 23 gün gelişme yok → arşivlendi.
-  - 2026-09-07: kontrol edildi, gelişme yok (arşivde kalıyor).
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 08-08: DiffusionGemma ve MiniMax H3 ilk takip. 08-10 – 08-31: 23 gün gelişme yok → arşivlendi. 09-07 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor).
 
 ### Gemini 3.5/3.6/3.7 Flash liderlik değişikliği / Gemini 4 (Google DeepMind)
 - İlk görülme: 2026-08-07 | Son güncelleme: 2026-08-17 | Arşivlenme: 2026-09-07 (21+ gün gelişme yok)
-- Günlük (arşivlenmeden önce):
-  - 2026-08-07: Hassabis CEO'luktan Alphabet başkanlığına geçti; Kavukcuoglu Gemini 4'ün başına geçti. Jeff Dean, Vinyals, Quoc Le, Ghemawat ayrılıp "Discovery Loop"u kurdu.
-  - 2026-08-10: kontrol edildi, gelişme yok.
-  - 2026-08-17 (🟡): Koray Kavukcuoglu resmen "frontier AI" çalışmalarının başına geçti (12 Ağustos).
-  - 2026-08-24, 08-31: kontrol edildi, gelişme yok.
-  - 2026-09-07: kontrol edildi, gelişme yok. Bu hafta yalnızca doğrulanmamış/spekülatif "Gemini 4 Pro checkpoint sızdı" haberleri (tek kaynaklı, güvenilirliği düşük bloglar) bulundu — birincil kaynak yok, rapora alınmadı. 21 gün gelişme yok → arşivlendi. NOT: Gemini modellerinin kendisi (Flash ailesi) ayrı bir konu olarak (#3) aktif takipte kalmaya devam ediyor; bu konu özel olarak DeepMind liderlik değişikliği ve Gemini 4 programını kapsıyor.
-  - 2026-09-14: kontrol edildi, gelişme yok (arşivde kalıyor).
+- Günlük: 08-07: Hassabis Alphabet başkanlığına geçti, Kavukcuoglu Gemini 4'ün başına geçti; Jeff Dean vb. ayrılıp "Discovery Loop"u kurdu. 08-10: gelişme yok. 08-17 (🟡): Kavukcuoglu resmen "frontier AI" başına geçti. 08-24 – 08-31: gelişme yok. 09-07: 21 gün gelişme yok → arşivlendi (spekülatif "checkpoint sızdı" haberleri doğrulanamadı, alınmadı). 09-14 – 09-21: kontrol edildi, gelişme yok (arşivde kalıyor; Gemini modellerinin kendisi #3'te ayrı takip ediliyor).
 
 ## Değişiklik Geçmişi
 
-(NOT: 3 aylık sıkıştırma kuralı gereği 2026-07-22 ve 2026-07-27 girdileri — takip sisteminin başlangıcı ve ilk 10 konu — özetlenip kaldırıldı; git commit geçmişinde korunuyor.)
+(NOT: Dosya 25KB sınırını aştığı için bu hafta sıkıştırma uygulandı — her konu için son 5 günlük kayıt bırakıldı, daha eskisi özet cümlelere indirildi; git commit geçmişinde tam hâli korunuyor. 2026-07-22, 07-27, 08-07 ve 08-08 tarihli Değişiklik Geçmişi girdileri de bu sıkıştırmada özetlenip kaldırıldı.)
 
-- 2026-08-07: 7 yeni konu; üç ayrı dosyaya bölünmüş liste birleştirildi.
-- 2026-08-08: 4 yeni konu, 7 konu güncellendi.
 - 2026-08-10: 3 yeni konu, 9 konu güncellendi; GitHub konektörüyle repo bölümü gerçek API'den doğrulandı.
 - 2026-08-10 (mimari değişiklik): Durum dosyası Google Drive'dan bu git deposuna taşındı.
 - 2026-08-17: 1 yeni konu, 10 konu güncellendi, 4 konu arşivlendi (GPT-5.6, ChatGPT for Work & GPT-Live, OptMem, Sakana Fugu-Cyber). İlk arşivleme turu.
 - 2026-08-24: 1 yeni konu (Vercel fx), 1 konu arşivden döndü (GPT-5.6), 11 konu güncellendi, 0 konu arşivlendi.
 - 2026-08-31: 0 yeni konu, 12 konu güncellendi, 6 konu arşivlendi (Kimi K3, Meta Muse Spark/Code, OpenAI Astra, AI ajan ödeme altyapısı, Mistral Shieldstral, çok modlu üretici modeller). Öne çıkan: Anthropic-Salesforce "Claudeforce" ortaklığı; Cowork hafıza birleşmesi; Qwen3.8-27B basın ilgisi; DeepSeek Harness 205.243 yıldız.
-- 2026-09-07: 0 yeni konu, 1 konu arşivden döndü (Meta Muse Spark 1.3, #28), 13 konu güncellendi (#2, #3, #6, #12, #13, #17, #20, #22, #24, #25, #26, #27, #28), 2 konu arşivlendi (Grok 4.6, Google DeepMind liderlik/Gemini 4 — ikisi de 21+ gün gelişme yok). Öne çıkan: OpenAI GPT-6 Astra'yı yayınladı (haftanın en büyük tekil gelişmesi — ARC-AGI-3 %99,9); Anthropic Claude Commerce Agents blueprint'ini açtı (2.275 yıldız <1 haftada); Meta Muse Spark 1.3 ile yeniden gündemde; Google Gemini 3.8 Flash'ı 3 hafta arayla art arda üçüncü kez yayınladı; GitSpawn (`core.fsmonitor`) RCE açığı 7 kodlama ajanını etkiledi (Claude Code, Cursor, Codex kısmen/tam yamalı — Hermes Agent, Qwen Code, Grok Build hâlâ açık); ShadowAqueduct/watermark-remover GitHub API'de artık bulunamıyor (muhtemelen silindi).
-- 2026-09-14: 1 yeni konu (Mistral AI 3 milyar € Series D turu, #29), 1 konu arşivden döndü (Grok 4.6 → 4.7, #30), 9 konu gerçek gelişmeyle güncellendi (#2, #6, #13, #17, #20, #22, #24, #25, #27), 7 konu kontrol edildi/gelişme yok (#3, #12, #15, #21, #23, #26, #28), 0 konu arşivlendi. Öne çıkan: Mistral AI, Samsung liderliğinde 3 milyar € Series D turu kapattı (Avrupa teknoloji tarihinin en büyük özkaynak turu, 21 milyar € değerleme); Microsoft Copilot'a Grok modelleri eklendi ve Grok 4.7 beşinci kez gecikti; DeepSeek V4.1-Flash yayınlandı; ajan hafızası repolarında büyük büyüme sıçraması (tigerless-labs/agent-memory %234, okf-agent-memory %62 haftalık artış); Anthropic Smart Reports (beta) ve tehdit istihbaratı raporu yayınladı.
+- 2026-09-07: 0 yeni konu, 1 konu arşivden döndü (Meta Muse Spark 1.3, #28), 13 konu güncellendi, 2 konu arşivlendi (Grok 4.6, Google DeepMind liderlik/Gemini 4). Öne çıkan: OpenAI GPT-6 Astra'yı yayınladı (ARC-AGI-3 %99,9); Anthropic Claude Commerce Agents blueprint'ini açtı; Meta Muse Spark 1.3; GitSpawn RCE açığı 7 kodlama ajanını etkiledi.
+- 2026-09-14: 1 yeni konu (Mistral 3 milyar € Series D, #29), 1 konu arşivden döndü (Grok 4.6→4.7, #30), 9 konu gerçek gelişmeyle güncellendi, 7 konu kontrol edildi/gelişme yok, 0 konu arşivlendi. Öne çıkan: Mistral 3 milyar € Series D (21 milyar € değerleme); Microsoft Copilot'a Grok eklendi; DeepSeek V4.1-Flash; ajan hafızası repolarında büyük büyüme sıçraması; Anthropic Smart Reports.
+- 2026-09-21: 2 yeni konu (TypeSafe AI Jev/System One Models #31, Z.ai ZCode #32), 12 konu gerçek gelişmeyle güncellendi (#2, #6, #12, #13, #17, #20, #22, #24, #25, #27, #28, #30), 3 konu kontrol edildi/gelişme yok (#3, #26, #29), 3 konu arşivlendi (AB AI Act #15, Anthropic Cowork #21, Salesforce Claudeforce #23 — üçü de 21+ gün gelişme yok). Bu hafta ayrıca dosya 25KB sınırını aştığı için sıkıştırma uygulandı. Öne çıkan: Anthropic, Claude'un kendi AR-GE'sinin %26'sını yönettiğini duyurdu; TypeSafe AI'nin "Jev" System One Model'i haftanın en büyük GitHub ekosistem patlamasını yarattı (onlarca bağımsız repo); Z.ai kodlama ajanı ZCode'u açık kaynağa açtı; Meta'nın "Muse" kişisel AI ajanı duyurusu geriye dönük eklendi; ajan hafızası kategorisinde tigerless-labs/agent-memory yıldızında %-29 düşüş gözlendi (izleniyor); GitSpawn açığının Hermes Agent'taki yama durumu kaynaklar arası çelişkili.
