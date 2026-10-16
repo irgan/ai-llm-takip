@@ -1,29 +1,32 @@
 # AI/LLM Takip Listesi
 
-Bu dosya AI/LLM özeti otomasyonunun KALICI DURUM dosyasıdır. Her çalışmada okunur, güncellenir ve AYNI YOLA (`takip-listesi.md`) yazılır. Git commit geçmişi sayesinde her çalışmanın değişimi diff olarak görülebilir.
+Bu dosya AI/LLM özeti otomasyonunun KALICI DURUM dosyasıdır. Her rapor çalışmasında okunur, güncellenir ve AYNI YOLA (`takip-listesi.md`) yazılır. Git commit geçmişi sayesinde her çalışmanın değişimi diff olarak görülebilir.
 
-Raporlar ayrı dosyalardır: `raporlar/YYYY-AA-GG.md`. Bu dosya rapor değil, takip durumudur.
+Raporlar ayrı dosyalardır: `raporlar/YYYY-AA-GG.md`. Bu dosya rapor değil, takip durumudur. Görev talimatının referans kopyası: `gorev-talimati.md`. Talimatla bu dosya çelişirse BU DOSYADAKİ kural geçerlidir.
 
 ## Çalışma Ritmi
 
-- **2026-10-17'den itibaren 3 günde bir** çalışır (öncesi haftalıktı: 2026-08-17 – 2026-10-12).
-- **Tarama penceresi:** `raporlar/` klasöründeki EN SON rapor dosyasının tarihinden sonraki gün → çalışma günü (dahil). Normalde 3 gün. Çalışma atlanırsa pencere son rapora kadar genişler, arada boşluk bırakılmaz; bu durum raporun kısıt notunda belirtilir.
-- **Rapor dosyası:** `raporlar/YYYY-AA-GG.md`, ad çalışma tarihidir. Aynı gün o adla bir rapor zaten varsa üzerine YAZILMAZ: mevcut rapor yeni bulgularla güncellenir ve kısıt notuna "aynı gün ikinci çalışma" eklenir.
-- **Başlık formatı:** `# AI/LLM Özeti — GG Ay YYYY (pencere: GG–GG Ay)`. Bölüm yapısı değişmez: 1. Haberler · 2. Yeni Araçlar · 3. Dikkat Çekici GitHub Repoları · 4. AI ile Çalışma Yöntemleri · 5. Önceki Konularda Gelişmeler.
+- **Tetikleme:** Zamanlayıcı HER GÜN 09:00'da (İstanbul) tetiklenir. Rapor 3 günde bir üretilir. Geçerlilik başlangıcı 2026-10-17; öncesi haftalıktı (2026-08-17 – 2026-10-12).
+- **Kapı (görev ADIM 0):** `raporlar/` klasöründeki en son tarihli dosyadan bu yana 3 gün geçmediyse çalışma hiçbir şey yazmadan biter. Bu dosya kapı günlerinde DEĞİŞMEZ; "Son kontrol" de güncellenmez.
+- **`raporlar/` klasöründe yalnızca `YYYY-AA-GG.md` dosyaları bulunur.** Başka dosya (taslak, not, alt klasör) konulmaz; kapı en son tarihi bu dosya adlarından okur.
+- **GitHub erişilemezse:** Kapı tarihle çalışır. 2026-10-17'den bu yana geçen gün sayısı 3'e tam bölünen günlerde degrade rapor üretilir, bu dosya güncellenmez.
+- **Tarama penceresi:** en son rapor dosyasının tarihinden sonraki gün → çalışma günü (dahil). Normalde 3 gün. Çalışma kaçarsa ya da yarıda kalırsa pencere son rapora kadar genişler, arada boşluk bırakılmaz; bu durum raporun kısıt notunda belirtilir.
+- **Rapor dosyası:** `raporlar/YYYY-AA-GG.md`, ad çalışma tarihidir. Aynı gün o adla bir rapor zaten varsa (yalnızca elle tetiklemede olur) üzerine YAZILMAZ: mevcut rapor yeni bulgularla güncellenir ve kısıt notuna "aynı gün ikinci çalışma" eklenir.
+- **Başlık formatı:** `# AI/LLM Özeti — GG Ay YYYY (pencere: GG–GG Ay)`. Bölüm yapısı değişmez: 1. Haberler · 2. Yeni Araçlar · 3. Dikkat Çekici GitHub Repoları · 4. AI ile Çalışma Yöntemleri · 5. Önceki Konularda Gelişmeler. (2026-10-12 ve öncesi raporların başlığı "Haftalık Özet"tir; değiştirilmez.)
 - **Kısa pencere:** Bölümlerin boş kalması normaldir. Boşluk doldurmak için zayıf haber eklenmez; "Bu dönemde kayda değer gelişme yok" yazılır.
 - **GitHub repo taraması (#24):** `created:` filtresi rapor penceresiyle aynıdır.
-- **Bekleyen notlar:** Bir konuda "BEKLEYEN NOT" varsa, sonraki çalışma onu doğrulayıp normal kayıt olarak işler ve notu siler.
+- **Bekleyen notlar:** Bir konuda "BEKLEYEN NOT" varsa, sonraki rapor çalışması onu birincil kaynaktan doğrulayıp normal kayıt olarak işler ve notu siler. Doğrulanamazsa "doğrulanamadı, kaldırıldı" diye kapatılır.
 
 ## Kurallar
 
-- Yeni bahsedilen her önemli konu buraya bir madde olarak eklenir.
+- Yeni bahsedilen her önemli konu buraya bir madde olarak eklenir (ilk görülme = son güncelleme = son kontrol = bugün). Bir çalışmada 0-3 yeni konu makuldür; fazlası mevcut konularla eşleştirilir.
 - Gerçek bir gelişme olduğunda "Son güncelleme" değişir ve günlüğe tarihli not eklenir.
 - ⚠️ Gelişme yoksa günlüğe satır EKLENMEZ. Yalnızca konu başlığındaki "Son kontrol" tarihi güncellenir. "Son güncelleme" DEĞİŞMEZ; arşivleme buna bağlıdır.
-- **Yalnızca yıldız büyümesi gerçek gelişme sayılmaz** ve "Son güncelleme"yi değiştirmez. Yıldızlar raporda her çalışmada verilir. Takip listesine en fazla 7 günde bir, tek satır olarak yazılır. Önceki kayda göre ±%25'i aşan değişim anomali sayılır ve hemen yazılır.
+- **Yalnızca yıldız büyümesi gerçek gelişme sayılmaz** ve "Son güncelleme"yi değiştirmez. Yıldızlar raporda her çalışmada verilir. Takip listesine son yıldız kaydından bu yana ≥7 gün geçtiyse, tek satır olarak (`(yıldız, tarih)` etiketiyle) yazılır. Önceki kayda göre ±%25'i aşan değişim anomali sayılır ve hemen yazılır.
 - Yıldız yüzdeleri bir önceki rapordaki değere göre hesaplanır ve karşılaştırma aralığı belirtilir (ör. "3 günde +%2,1").
-- "Son güncelleme"si 21+ gün eskiyen konu "Arşivlenmiş Konular"a taşınır (her çalışmada kontrol edilir). Arşivdeki konu yeniden gündeme gelirse Aktif'e döner.
-- Sayısal iddialar (yıldız, parametre, benchmark) yalnızca birincil kaynaktan/API'den alınır. GitHub yıldızları yalnızca `stargazers_count`'tan alınır.
-- **Sıkıştırma:** Dosya 25KB'ı aştığında ya da 3 ayda bir yapılır. Her konuda son 3 kayıt bırakılır, öncesi özet satırına indirilir. #24'te her tarama için en fazla 5 repo tutulur (tam liste raporda). Hedef: sıkıştırma sonrası ≤20KB. Bu, her çalışmada tekrar sıkıştırma yapılmasını önler.
+- "Son güncelleme"si 21+ gün eskiyen konu "Arşivlenmiş Konular"a taşınır (her rapor çalışmasında kontrol edilir). Arşivdeki konu yeniden gündeme gelirse Aktif'e döner. Arşivdeki konulara gelişme yoksa satır eklenmez.
+- Sayısal iddialar (yıldız, parametre, benchmark, fiyat) yalnızca birincil kaynaktan/API'den alınır. GitHub yıldızları yalnızca `stargazers_count`'tan alınır.
+- **Sıkıştırma:** YALNIZCA dosya 25 KB'ı aştığında yapılır. Her konuda son 3 günlük kayıt bırakılır, öncesi konunun "Özet" satırına eklenir; #24'te tarama başına en fazla 5 repo tutulur (tam liste raporda); "Değişiklik Geçmişi"nde son 10 satır bırakılır, öncesi tek bir "bkz. git geçmişi" satırına indirilir. Hedef: sıkıştırma sonrası ≤20 KB (her çalışmada tekrar sıkıştırmayı önler).
 - Kısaltmalar: K1 = doğrulanamadı/alınmadı, K2 = kaynağa erişilemedi, K3 = geriye dönük fark edildi.
 - Geriye dönük üretilen raporlarda geçmiş tarihli yıldız verisi alınamaz. Yıldızlar üretim günü itibarıyla verilir ve bu kayıtta belirtilir.
 
@@ -83,7 +86,7 @@ Raporlar ayrı dosyalardır: `raporlar/YYYY-AA-GG.md`. Bu dosya rapor değil, ta
   - 2026-10-05 (🟡): CopilotKit/OpenDots — OpenAI Dots'un açık kaynak karşılığı (29 Eylül). Bkz. #33.
   - 2026-10-12 (yıldız, 16 Ekim): eigent 15.569 (+%1,4 — büyüme fiilen durdu); OpenDots 5.480; nanoMuse 1.328.
 
-### 24. Yeni GitHub AI/agent repoları (her çalışmada tarama)
+### 24. Yeni GitHub AI/agent repoları (her rapor çalışmasında tarama)
 - İlk görülme: 2026-08-10 | Son güncelleme: 2026-10-12 | Son kontrol: 2026-10-12 | Durum: Aktif
 - Özet (08-10/09-21): önceki taramalar raporlarda; 09-21 Jev ekosistemi patlaması.
   - 2026-09-28 (🟢, ilk 5, yıldız 16 Ekim): ⚠️ Ebony-Vinyl/dsh-our-free-model (19.173, riskli), yetone/magpie (14.115), KKKKhazix/AIHOT (7.880), yihui-dev/awesome-opus5-5-videos (5.444), Louis-CFM/coucou (5.361). Desen: Opus 5.5 ile kodla video üretimi.
@@ -173,4 +176,5 @@ Raporlar ayrı dosyalardır: `raporlar/YYYY-AA-GG.md`. Bu dosya rapor değil, ta
 - 2026-09-28 (geriye dönük, 16 Ekim'de üretildi): +1 konu (#34), 6 güncelleme, 1 arşiv (#3). Opus/Sonnet 5.5, GPT-6 Sol/Luna, OpenAI eğitim duraklatması, Grok 4.7 düzeltmesi.
 - 2026-10-05 (geriye dönük): +1 konu (#33), #3 arşivden döndü, 5 güncelleme, 1 arşiv (#29). OpenAI DevDay, Gemini 4 Argon.
 - 2026-10-12: #29 arşivden döndü, 11 güncelleme. Haiku 5.5, Muse Wonder, Mistral Large 4, GLM-Legal. Yıldızlar 16 Ekim itibarıyla.
-- 2026-10-16: Ritim 3 günde bire geçirildi (ilk çalışma 2026-10-17, pencere 13–17 Ekim). "Son kontrol" alanı, "gelişme yoksa satır ekleme" ve "yıldız tek başına güncelleme sayılmaz" kuralları eklendi. Aynı gün çift çalışma kuralı ve "BEKLEYEN NOT" mekanizması eklendi. Dosya ≤20KB'a sıkıştırıldı (kontrol-edildi satırları ve #24 listeleri kısaltıldı; tam hâl git geçmişinde).
+- 2026-10-16: Ritim 3 günde bire geçirildi. "Son kontrol" alanı, "gelişme yoksa satır ekleme", "yıldız tek başına güncelleme sayılmaz", aynı gün çift çalışma ve BEKLEYEN NOT kuralları eklendi. Dosya ≤20 KB'a sıkıştırıldı.
+- 2026-10-16 (2): Görev günlük tetikleme + 3 gün kapısı (ADIM 0) modeline uyarlandı. Kapı/degrade-tarih kuralları ve `raporlar/` klasörü kısıtı eklendi. Sıkıştırmadaki "3 ayda bir" tetikleyicisi kaldırıldı (talimatla uyum); Değişiklik Geçmişi için "son 10 satır" kuralı eklendi. Görev talimatının referans kopyası `gorev-talimati.md` olarak eklendi.
